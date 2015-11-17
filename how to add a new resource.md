@@ -76,6 +76,8 @@ No need to do the above part any more
 
 	* "parse" method is used for "checking" the validity, while "process" method is used for "processing" and store information. "parse" only store information for Container's "creator" attribute. 
 
+	* <Mandatory> attributes are checked in the "process" part.
+
 	* "Onem2mDb.java" translate injson payload(payload of create) to json resource then store the whole json resource(what retrieve will return) in the data tree. During this process, if attribute is set to null when <Update>, it will be removed.
 
 5. Add statistics information for this new resource. This stats is used for some analysis in the future.
@@ -88,6 +90,9 @@ No need to do the above part any more
 	
 	The **Delete** and **Retrieve** method in this file are used for statistic use only.  
 
+6. modify the resourceType in the template's "handleCreateUpdate" method, there are 2 places needs to be replaced.
+
+6. Read Chapter 10 about the detail of CRUD operations for this resource.
 7. Add the **logic** part related with this new Resource. In the <Node> example, the related resource is <CSEBase> and <RemoteCSE> etc, we may need to modify the "CRUD" functions of affected resources inside these resources' java file. Might need to modify "Onem2mDb.java".
 
 
