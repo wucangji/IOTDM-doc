@@ -78,6 +78,8 @@ No need to do the above part any more
 
 	* <Mandatory> attributes are checked in the "process" part.
 
+	* `resourceContent.jsonCreateKeys.add(key);` this line is import in the parse step, it is used to respond assigned by system attributes only in the response.
+	 
 	* "Onem2mDb.java" translate injson payload(payload of create) to json resource then store the whole json resource(what retrieve will return) in the data tree. During this process, if attribute is set to null when <Update>, it will be removed.
 
 5. Add statistics information for this new resource. This stats is used for some analysis in the future.
